@@ -20,3 +20,12 @@ td {
   width: 25%;
   height: 25%;
 }
+
+td:hover {
+			background-color: grey;
+		}
+
+td.taken:hover {
+			cursor: default;
+			background-color: inherit;
+		}
