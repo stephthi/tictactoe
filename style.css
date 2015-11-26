@@ -19,6 +19,7 @@ td {
   padding: 0;
   width: 25%;
   height: 25%;
+  font-size: 6em;
 }
 
 td:hover {
