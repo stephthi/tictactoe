@@ -12,31 +12,38 @@ var turns = function() {
       turn = "player1"
       $(this).text('o');
     }
-  }
-
-$('td').on('click', turns);
+  };
 
 
-var winner = function() {
-	$('td').off("click");
+$('td').on('click', function(){
+	turns();
+	winCheck();
+});
+
+
+var winCheck = function() {
+
+	var winner = function() {
+	$('td').off('click');
   window.alert("Winner!");
- };
+}
 
-for (var i = winningCombos.length - 1; i >= 0; i--) {
-	winningCombo[i]
-	var id = winningCombos[i][0];
- 	var moveOne = $('#' + id).text()
+	for (var i = winningCombos.length - 1; i >= 0; i--) {
+		winningCombos[i]
+		var id = winningCombos[i][0];
+	 	var moveOne = $('#' + id).text();
 
-	id = winningCombos[i][1];
-	var moveTwo = $('#' + id).text()
+		id = winningCombos[i][1];
+		var moveTwo = $('#' + id).text();
 
-	id = winningCombos[i][2];
-	var moveThree = $('#' + id).text()
+		id = winningCombos[i][2];
+		var moveThree = $('#' + id).text();
 
-	if ( moveOne === moveTwo && moveTwo === moveThree ) {
-		winner();
-	}
+		if ( moveOne == moveTwo && moveTwo == moveThree ) {
+			winner();
+		}
 
+	};
 };
 
 });
