@@ -1,8 +1,14 @@
+body {
+	text-align: center;
+	font-family: Arial;
+}
+
 table {
   border-spacing: 0;
   width: 30em;
   height: 30em;
   background-color: #F2F2F2;
+  margin: 0 auto;
 }
 
 table, td {
