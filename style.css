@@ -1,3 +1,16 @@
 table {
-	border: 2px, black;
+  border-spacing: 0;
+  width: 30em;
+  height: 30em;
+  background-color: #F2F2F2;
+}
+
+table, td {
+  border: 1px solid black;
+}
+
+td {
+  padding: 0;
+  width: 25%;
+  height: 25%;
 }
