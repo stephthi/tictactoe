@@ -28,6 +28,12 @@ var winCheck = function() {
   window.alert("Winner!");
 }
 
+	function is_full() {
+    return $("td").all(".x, .o");
+    window.alert("Play Again!");
+  }
+
+
 	for (var i = winningCombos.length - 1; i >= 0; i--) {
 		winningCombos[i]
 		var id = winningCombos[i][0];
@@ -39,9 +45,13 @@ var winCheck = function() {
 		id = winningCombos[i][2];
 		var moveThree = $('#' + id).text();
 
-		if ( moveOne == moveTwo && moveTwo == moveThree ) {
+		if ( (moveOne != "") &&
+					( moveOne == moveTwo && moveTwo == moveThree ) {
 			winner();
 		}
+		// else if (is_full(){
+		// 	is_full ();
+		// }
 
 	};
 };
